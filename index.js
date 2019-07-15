@@ -32,7 +32,7 @@ function builder({ output, args }) {
     }, generateAccumulator(output))
 }
 
-function list(...args) {
+function array(...args) {
     return builder({ output: OUTPUT.array, args })
 }
 
@@ -41,6 +41,6 @@ function string(...args) {
 }
 
 module.exports = {
-    list,
+    array,
     string
 }
