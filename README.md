@@ -9,15 +9,15 @@ There are two named exports from the `class-list` library: `array`, and `string`
 Call either function and pass the desired class names as arguments:
 
 ```js
-classList.array('one', 2, 'three', 4)
-// -> ['one', 2 'three', 4]
+classList.string('one', 2, 'three', 4)
+// -> 'one 2 three 4'
 ```
 
 Arguments at evaluate to `false` are removed from the output:
 
 ```js
-classList.string(0, 'one', undefined, 'three')
-// -> 'one three'
+classList.array(0, 'one', undefined, 'three')
+// -> ['one, 'three']
 ```
 
 This means you can use conditions in the passed arguments to selectively add classes:
