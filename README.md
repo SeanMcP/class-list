@@ -2,9 +2,17 @@
 
 🦆 A simpler class list builder
 
+## Install
+
+```sh
+npm install --save @seanmcp/class-list
+# or
+yarn add @seanmcp/class-list
+```
+
 ## API
 
-There are two named exports from the `class-list` library: `array`, and `string`. They function in the same manner and differ only in what they return.
+There are two named exports from the `@seanmcp/class-list` library: `array`, and `string`. They function in the same manner and differ only in what they return.
 
 Call either function and pass the desired class names as arguments:
 
@@ -40,7 +48,7 @@ classList.array('book', time < 1 && '--due')
 
 ```jsx
 import React from 'react'
-import { string } from 'class-list'
+import { string } from '@seanmcp/class-list'
 
 export default function ToggleButton(props) {
     const [isOn, toggle] = useToggle() // A basic custom hook

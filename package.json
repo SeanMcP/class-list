@@ -1,7 +1,7 @@
 {
     "name": "@seanmcp/class-list",
     "private": false,
-    "version": "1.0.0",
+    "version": "0.0.0",
     "description": "",
     "main": "lib.js",
     "files": [
