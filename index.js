@@ -1,37 +1,43 @@
-function isArray(input) {
-    return Array.isArray(input)
+const OUTPUT = {
+    array: 'array',
+    string: 'string'
 }
 
-function isString(input) {
-    return typeof input === 'string'
+function generateAccumulator(key) {
+    switch (key) {
+        case OUTPUT.array: {
+            return new Array()
+        }
+        case OUTPUT.string: {
+            return new String()
+        }
+    }
 }
 
 function builder({ output, args }) {
-    const outputIsArray = isArray(output)
-    const outputIsString = isString(output)
-    if (!outputIsArray && !outputIsString) {
-        throw new TypeError(
-            'The first argument passed to `builder()` must of type `string` or `array`.'
-        )
-    }
     return args.reduce((accumulator, arg, i) => {
         if (Boolean(arg)) {
-            if (outputIsArray) {
-                accumulator.push(arg)
-            } else if (outputIsString) {
-                accumulator += (i !== 0 ? ' ' : '') + arg
+            switch (output) {
+                case OUTPUT.array: {
+                    accumulator.push(arg)
+                    break
+                }
+                case OUTPUT.string: {
+                    accumulator += (i !== 0 ? ' ' : '') + arg
+                    break
+                }
             }
         }
         return accumulator
-    }, output)
+    }, generateAccumulator(output))
 }
 
 function list(...args) {
-    return builder({ output: [], args })
+    return builder({ output: OUTPUT.array, args })
 }
 
 function string(...args) {
-    return builder({ output: '', args })
+    return builder({ output: OUTPUT.string, args })
 }
 
 module.exports = {
