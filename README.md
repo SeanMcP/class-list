@@ -4,6 +4,13 @@
 
 🦆 A simpler class list builder
 
+## Use
+
+```js
+classList.string('Build', 'class lists', true && 'without', 'fear')
+// -> 'Build class lists without fear'
+```
+
 ## Install
 
 ```sh
