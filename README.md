@@ -1,5 +1,7 @@
 # Class List
 
+[![npm](https://img.shields.io/npm/v/@seanmcp/class-list.svg)](https://npmjs.com/package/@seanmcp/class-list) [![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/@seanmcp/class-list.svg)](https://npmjs.com/package/@seanmcp/class-list) [![npm](https://img.shields.io/npm/dt/@seanmcp/class-list.svg)](https://npmjs.com/package/@seanmcp/class-list)
+
 🦆 A simpler class list builder
 
 ## Install
