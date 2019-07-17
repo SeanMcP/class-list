@@ -11,6 +11,12 @@ classList.string('Build', 'class lists', true && 'without', 'fear')
 // -> 'Build class lists without fear'
 ```
 
+## Why
+
+[Jed Watson's `classnames` library](https://github.com/JedWatson/classnames) is pretty much the industry standard for building a list of class names. Definitely check that out if you haven't already.
+
+This library serves as an alternative with a simpler API for conditional classes. Instead of building dynamic keys on passed objects, you can use a simple `&&` binary to pass the class if the condition is `true`.
+
 ## Install
 
 ```sh
