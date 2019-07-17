@@ -12,7 +12,13 @@
         "prebuild": "jest",
         "test": "jest --coverage"
     },
-    "keywords": [],
+    "keywords": [
+        "class",
+        "classlist",
+        "class list",
+        "classname",
+        "classnames"
+    ],
     "author": "",
     "license": "ISC",
     "devDependencies": {
