@@ -3,12 +3,12 @@
     "private": false,
     "version": "0.0.0",
     "description": "",
-    "main": "lib.js",
+    "main": "lib/index.js",
     "files": [
-        "lib.js"
+        "lib"
     ],
     "scripts": {
-        "build": "terser --compress --mangle --output lib.js -- index.js",
+        "build": "terser --compress --mangle --output lib/index.js -- src/index.js",
         "prebuild": "jest",
         "test": "jest --coverage"
     },
