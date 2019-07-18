@@ -7,7 +7,7 @@
 ## Use
 
 ```js
-classList.string('Build', 'class lists', true && 'without', 'fear')
+classList('Build', 'class lists', true && 'without', 'fear')
 // -> 'Build class lists without fear'
 ```
 
@@ -27,20 +27,18 @@ yarn add @seanmcp/class-list
 
 ## API
 
-There are two named exports from the `@seanmcp/class-list` library: `array`, and `string`. They function in the same manner and differ only in what they return.
-
-Call either function and pass the desired class names as arguments:
+Import or require the default function exported from `@seanmcp/class-list`, then call and pass the desired class names as arguments:
 
 ```js
-classList.string('one', 2, 'three', 4)
+classList('one', 2, 'three', 4)
 // -> 'one 2 three 4'
 ```
 
 Arguments at evaluate to `false` are removed from the output:
 
 ```js
-classList.array(0, 'one', undefined, 'three')
-// -> ['one, 'three']
+classList(0, 'one', undefined, 'three')
+// -> 'one three'
 ```
 
 This means you can use conditions in the passed arguments to selectively add classes:
@@ -48,13 +46,13 @@ This means you can use conditions in the passed arguments to selectively add cla
 ```js
 let time = 1
 
-classList.string('book', time < 1 && '--due')
+classList('book', time < 1 && '--due')
 // -> 'book'
 
 time = 0
 
-classList.array('book', time < 1 && '--due')
-// -> ['book', '--due']
+classList('book', time < 1 && '--due')
+// -> 'book --due'
 ```
 
 ## Examples
@@ -63,13 +61,13 @@ classList.array('book', time < 1 && '--due')
 
 ```jsx
 import React from 'react'
-import { string } from '@seanmcp/class-list'
+import classList from '@seanmcp/class-list'
 
 export default function ToggleButton(props) {
     const [isOn, toggle] = useToggle() // A basic custom hook
     return (
         <button
-            className={string('ToggleButton', isOn && 'ToggleButton--on')}
+            className={classList('ToggleButton', isOn && 'ToggleButton--on')}
             onClick={toggle}
             {...props}
         >
