@@ -2,9 +2,11 @@
     "name": "@seanmcp/class-list",
     "private": false,
     "version": "1.0.0",
-    "description": "",
+    "description": "A simpler class list builder",
     "main": "lib/index.js",
     "repository": "https://github.com/seanmcp/class-list",
+    "homepage": "https://github.com/seanmcp/class-list#readme",
+    "bugs": "https://github.com/seanmcp/class-list/issues",
     "files": [
         "lib"
     ],
@@ -20,8 +22,8 @@
         "classname",
         "classnames"
     ],
-    "author": "",
-    "license": "ISC",
+    "author": "Sean McPherson <sean@seanmcp.com> (https://github.com/seanmcp)",
+    "license": "MIT",
     "devDependencies": {
         "jest": "^24.8.0",
         "nodemon": "^1.19.1",
