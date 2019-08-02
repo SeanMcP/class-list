@@ -1,7 +1,7 @@
 {
     "name": "@seanmcp/class-list",
     "private": false,
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A simpler class list builder",
     "main": "lib/index.js",
     "repository": "https://github.com/seanmcp/class-list",
