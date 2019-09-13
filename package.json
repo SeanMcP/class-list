@@ -11,7 +11,7 @@
         "lib"
     ],
     "scripts": {
-        "build": "terser --compress --mangle --output lib/index.js -- src/index.js",
+        "build": "mkdir \"lib\" && terser --compress --mangle --output lib/index.js -- src/index.js",
         "prebuild": "jest",
         "test": "jest --coverage"
     },
