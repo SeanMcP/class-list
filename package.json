@@ -11,7 +11,7 @@
     "lib"
   ],
   "scripts": {
-    "build": "mkdir \"lib\" && terser --compress --mangle --output lib/index.js -- src/index.js",
+    "build": "babel src/index.js --out-file lib/index.js",
     "prebuild": "jest",
     "test": "jest --coverage"
   },
@@ -25,8 +25,10 @@
   "author": "Sean McPherson <sean@seanmcp.com> (https://github.com/seanmcp)",
   "license": "MIT",
   "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.0",
+    "@babel/preset-env": "^7.7.1",
     "jest": "^24.8.0",
-    "nodemon": "^1.19.1",
-    "terser": "^4.1.2"
+    "nodemon": "^1.19.1"
   }
 }
