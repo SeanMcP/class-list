@@ -1,32 +1,34 @@
 {
-    "name": "@seanmcp/class-list",
-    "private": false,
-    "version": "1.0.2",
-    "description": "A simpler class list builder",
-    "main": "lib/index.js",
-    "repository": "https://github.com/seanmcp/class-list",
-    "homepage": "https://github.com/seanmcp/class-list#readme",
-    "bugs": "https://github.com/seanmcp/class-list/issues",
-    "files": [
-        "lib"
-    ],
-    "scripts": {
-        "build": "mkdir \"lib\" && terser --compress --mangle --output lib/index.js -- src/index.js",
-        "prebuild": "jest",
-        "test": "jest --coverage"
-    },
-    "keywords": [
-        "class",
-        "classlist",
-        "class list",
-        "classname",
-        "classnames"
-    ],
-    "author": "Sean McPherson <sean@seanmcp.com> (https://github.com/seanmcp)",
-    "license": "MIT",
-    "devDependencies": {
-        "jest": "^24.8.0",
-        "nodemon": "^1.19.1",
-        "terser": "^4.1.2"
-    }
+  "name": "@seanmcp/class-list",
+  "private": false,
+  "version": "1.0.2",
+  "description": "A simpler class list builder",
+  "main": "lib/index.js",
+  "repository": "https://github.com/seanmcp/class-list",
+  "homepage": "https://github.com/seanmcp/class-list#readme",
+  "bugs": "https://github.com/seanmcp/class-list/issues",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "babel src/index.js --out-file lib/index.js",
+    "prebuild": "jest",
+    "test": "jest --coverage"
+  },
+  "keywords": [
+    "class",
+    "classlist",
+    "class list",
+    "classname",
+    "classnames"
+  ],
+  "author": "Sean McPherson <sean@seanmcp.com> (https://github.com/seanmcp)",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.0",
+    "@babel/preset-env": "^7.7.1",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.1"
+  }
 }
