@@ -20,7 +20,7 @@ This library serves as an alternative with a simpler API for conditional classes
 ## Install
 
 ```sh
-npm install --save @seanmcp/class-list
+npm install @seanmcp/class-list
 # or
 yarn add @seanmcp/class-list
 ```
