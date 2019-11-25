@@ -1,12 +1,11 @@
 {
   "name": "class-list-builder",
-  "private": false,
   "version": "1.1.0",
   "description": "A simpler class list builder",
   "main": "lib/index.js",
-  "repository": "https://github.com/seanmcp/class-list",
-  "homepage": "https://github.com/seanmcp/class-list#readme",
-  "bugs": "https://github.com/seanmcp/class-list/issues",
+  "repository": "https://github.com/seanmcp/class-list-builder",
+  "homepage": "https://github.com/seanmcp/class-list-builder#readme",
+  "bugs": "https://github.com/seanmcp/class-list-builder/issues",
   "files": [
     "lib"
   ],
