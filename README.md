@@ -1,13 +1,13 @@
-# Class List
+# Class List Builder
 
-[![npm](https://img.shields.io/npm/v/@seanmcp/class-list.svg)](https://npmjs.com/package/@seanmcp/class-list) [![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/@seanmcp/class-list.svg)](https://npmjs.com/package/@seanmcp/class-list) [![npm](https://img.shields.io/npm/dt/@seanmcp/class-list.svg)](https://npmjs.com/package/@seanmcp/class-list)
+[![npm](https://img.shields.io/npm/v/class-list-builder.svg)](https://npmjs.com/package/class-list-builder) [![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/class-list-builder.svg)](https://npmjs.com/package/class-list-builder) [![npm](https://img.shields.io/npm/dt/class-list-builder.svg)](https://npmjs.com/package/class-list-builder)
 
-🦆 A simpler class list builder
+🏗 A simpler class list builder
 
 ## Use
 
 ```js
-classList('Build', 'class lists', true && 'without', 'fear')
+classListBuilder('Build', 'class lists', true && 'without', 'fear')
 // -> 'Build class lists without fear'
 ```
 
@@ -20,24 +20,24 @@ This library serves as an alternative with a simpler API for conditional classes
 ## Install
 
 ```sh
-npm install @seanmcp/class-list
+npm install class-list-builder
 # or
-yarn add @seanmcp/class-list
+yarn add class-list-builder
 ```
 
 ## API
 
-Import or require the default function exported from `@seanmcp/class-list`, then call and pass the desired class names as arguments:
+Import or require the default function exported from `class-list-builder`, then call and pass the desired class names as arguments:
 
 ```js
-classList('one', 2, 'three', 4)
+classListBuilder('one', 2, 'three', 4)
 // -> 'one 2 three 4'
 ```
 
 Arguments at evaluate to `false` are removed from the output:
 
 ```js
-classList(0, 'one', undefined, 'three')
+classListBuilder(0, 'one', undefined, 'three')
 // -> 'one three'
 ```
 
@@ -46,12 +46,12 @@ This means you can use conditions in the passed arguments to selectively add cla
 ```js
 let time = 1
 
-classList('book', time < 1 && '--due')
+classListBuilder('book', time < 1 && '--due')
 // -> 'book'
 
 time = 0
 
-classList('book', time < 1 && '--due')
+classListBuilder('book', time < 1 && '--due')
 // -> 'book --due'
 ```
 
@@ -61,13 +61,13 @@ classList('book', time < 1 && '--due')
 
 ```jsx
 import React from 'react'
-import classList from '@seanmcp/class-list'
+import classListBuilder from 'class-list-builder'
 
 export default function ToggleButton(props) {
     const [isOn, toggle] = useToggle() // A basic custom hook
     return (
         <button
-            className={classList('ToggleButton', isOn && 'ToggleButton--on')}
+            className={classListBuilder('ToggleButton', isOn && 'ToggleButton--on')}
             onClick={toggle}
             {...props}
         >
@@ -76,3 +76,7 @@ export default function ToggleButton(props) {
     )
 }
 ```
+
+## LICENSE
+
+[MIT](/LICENSE)

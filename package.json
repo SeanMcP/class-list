@@ -1,5 +1,5 @@
 {
-  "name": "@seanmcp/class-list",
+  "name": "class-list-builder",
   "private": false,
   "version": "1.1.0",
   "description": "A simpler class list builder",
@@ -19,6 +19,8 @@
     "class",
     "classlist",
     "class list",
+    "class list builder",
+    "class builder",
     "classname",
     "classnames"
   ],

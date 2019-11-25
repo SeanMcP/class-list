@@ -1,4 +1,4 @@
-function classList(...args) {
+function classListBuilder(...args) {
   let list = "";
   for (let i = 0; i < args.length; i++) {
     const arg = args[i];
@@ -9,4 +9,4 @@ function classList(...args) {
   return list;
 }
 
-module.exports = classList;
+module.exports = classListBuilder;
