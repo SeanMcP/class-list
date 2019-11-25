@@ -76,3 +76,7 @@ export default function ToggleButton(props) {
     )
 }
 ```
+
+## LICENSE
+
+[MIT](/LICENSE)
